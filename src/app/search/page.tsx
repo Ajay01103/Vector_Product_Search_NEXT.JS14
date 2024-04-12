@@ -47,34 +47,32 @@ const SearchPage = async ({ searchParams }: PageProps) => {
   }
 
   return (
-    <Suspense fallback={<Loading />}>
-      <ul className="py-4 divide-y divide-zinc-100 bg-white shadow-md rounded-b-md">
-        {products.map((product) => (
-          <Link
-            key={product.id}
-            href={`/products/${product.id}`}
-          >
-            <li className="mx-auto py-4 px-8 flex space-x-4">
-              <div className="relative flex items-center bg-zinc-100 rounded-lg h-40 w-40">
-                <Image
-                  fill
-                  alt={product.imageId}
-                  src={`/${product.imageId}`}
-                />
-              </div>
+    <ul className="py-4 divide-y divide-zinc-100 bg-white shadow-md rounded-b-md">
+      {products.map((product) => (
+        <Link
+          key={product.id}
+          href={`/products/${product.id}`}
+        >
+          <li className="mx-auto py-4 px-8 flex space-x-4">
+            <div className="relative flex items-center bg-zinc-100 rounded-lg h-40 w-40">
+              <Image
+                fill
+                alt={product.imageId}
+                src={`/${product.imageId}`}
+              />
+            </div>
 
-              <div className="w-full flex-1 space-y-2 py-1">
-                <h1 className="text-lg font-medium text-gray-700">{product.name}</h1>
+            <div className="w-full flex-1 space-y-2 py-1">
+              <h1 className="text-lg font-medium text-gray-700">{product.name}</h1>
 
-                <p className="prose prose-sm text-gray-500 line-clamp-2">{product.description}</p>
+              <p className="prose prose-sm text-gray-500 line-clamp-2">{product.description}</p>
 
-                <p className="text-base font-medium text-gray-700">$ {product.price}</p>
-              </div>
-            </li>
-          </Link>
-        ))}
-      </ul>
-    </Suspense>
+              <p className="text-base font-medium text-gray-700">$ {product.price}</p>
+            </div>
+          </li>
+        </Link>
+      ))}
+    </ul>
   )
 }
 
