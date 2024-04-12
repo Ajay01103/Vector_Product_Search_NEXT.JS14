@@ -10,6 +10,7 @@ interface ProductPageProps {
     productId: string
   }
 }
+
 const ProductPage = async ({ params }: ProductPageProps) => {
   const { productId } = params
 
@@ -43,6 +44,12 @@ const ProductPage = async ({ params }: ProductPageProps) => {
               alt="prod"
               className="h-full w-full object-cover object-center"
             />
+          </div>
+        </div>
+
+        <div className="mt-4">
+          <div className="flex items-center">
+            <p className="font-medium text-gray-900">${product.price.toFixed(2)}</p>
           </div>
         </div>
       </div>

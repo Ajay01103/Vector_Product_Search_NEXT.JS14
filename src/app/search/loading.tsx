@@ -6,7 +6,7 @@ export default function Loading() {
           key={i}
           className="mx-auto py-4 w-full px-8 animate-pulse flex space-x-4"
         >
-          <div className="rounded-lg bg-gray-200 h-40 w-40" />
+          <div className="rounded-lg bg-gray-300 h-40 w-40" />
           <div className="w-full flex-1 space-y-4 py-1">
             <div className="h-10 bg-gray-300 rounded w-full" />
             <div className="space-y-2">
