@@ -1,5 +1,3 @@
-"use client"
-
 export default function Loading() {
   return (
     <ul className="py-4 divide-y divide-gray-200 bg-white shadow-md rounded-b-md">
