@@ -35,16 +35,14 @@ const SearchPage = async ({ searchParams }: PageProps) => {
 
   if (products.length === 0) {
     return (
-      <Suspense fallback={<Loading />}>
-        <div className="text-center py-4 bg-white shadow-md rounded-b-md">
-          <X className="mx-auto h-8 w-8 text-gray-400" />
-          <h3 className="mt-2 text-sm font-semibold text-gray-900">No Results</h3>
-          <p className="mt-1 text-sm mx-auto max-w-prose text-gray-500">
-            Sorry, we could&apos;nt find anything for{" "}
-            <span className="text-gray-600 font-medium">{query}</span>
-          </p>
-        </div>
-      </Suspense>
+      <div className="text-center py-4 bg-white shadow-md rounded-b-md">
+        <X className="mx-auto h-8 w-8 text-gray-400" />
+        <h3 className="mt-2 text-sm font-semibold text-gray-900">No Results</h3>
+        <p className="mt-1 text-sm mx-auto max-w-prose text-gray-500">
+          Sorry, we could&apos;nt find anything for{" "}
+          <span className="text-gray-600 font-medium">{query}</span>
+        </p>
+      </div>
     )
   }
 
